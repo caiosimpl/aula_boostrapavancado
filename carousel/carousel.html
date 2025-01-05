@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- a estrutura do carrossel consiste em uma div com id, classes e atributos do bootstrap que apontam para o carrossel
+         como um todo-->
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <!-- depois, uma outra div que indica o carousel-inner -->
+            <div class="carousel-inner">
+                <!-- dentro do inner, possuimos os itens, que são os elementos que farão parte do carrossel. -->
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <!-- obs: é possivel com o bootstrap fazer alterações que seriam do css dentro do html, como o 
+                     d-block = (display block)
+                     w-100 = (width = 100;)-->
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/11/19/20/25/bubble-8399795_640.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>oiiii</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2024/01/01/23/41/trees-8482254_640.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>oiiii</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/11/07/02/33/wind-power-generation-8370867_640.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>oiiii</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- já aqui, ainda dentro do carousel inner, criamos os botões e os indicadores do carrossel. -->
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>    
+    </div>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <style>
+        .btn-group{
+            padding: 24px 0;
+        }
+
+        .dropdown{
+            padding-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- fiz três tipos de menu dropdown com botão. -->
+    <div class="container">
+        <!-- o primeiro, é um menu com duas funcionalidades, o botão de "Clique aqui" 
+         e o botão do dropdown. Perceba que são dois diferentes, porem juntos
+         logo, a classe da div principal é "btn-group" ao invés de dropdown -->
+        <div class="btn-group">
+            <button class="btn btn-primary">Clique Aqui</button>
+            <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle dropdown-toggle-split"></button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item">
+                    <a href="#">Novo usuário</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo fornecedor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo funcionario</a>
+                </li>
+            </ul>
+        </div>
+        <!-- o segundo, possui as mesmas funcionalidades que o primeiro, porém, os botões ficam splitados-->
+        <div class="dropdown">
+            <button class="btn btn-primary">Clique Aqui</button>
+            <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle dropdown-toggle-split"></button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item">
+                    <a href="#">Novo usuário</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo fornecedor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo funcionario</a>
+                </li>
+            </ul>
+        </div>
+        <!-- já esse, possui apenas um botão com a funcionalidade de dropdown -->
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle">Clique Aqui</button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                    <a href="#">Novo usuário</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo fornecedor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">Novo funcionario</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>

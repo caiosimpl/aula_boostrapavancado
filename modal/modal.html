@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <style>
+        .container button{
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- modal é uma forma de "popup". 
+         a estrutura é apartir do modal dialog > modal content
+         dentro do modal content, pode-se customizar com header, body e footer 
+         -->
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exemplo-modal">Abrir modal</button>
+        <div id="exemplo-modal" class="modal" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Cabeçalho da modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum aliquam nemo vero explicabo maiores maxime commodi aliquid sequi? Omnis, eos laboriosam illum dolor minus quis itaque aut voluptate sed dolorum!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <!-- também é possível tornar realmente um popup (assim que abrir o site, aparecer o modal)
+     com o javascript: -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            modalExemplo.show();
+        })
+    </script>
+</body>
+</html>

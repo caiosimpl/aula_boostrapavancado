@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - cards</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <style>
+        .card-img-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bootstrap - Cards</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <!-- os cards são divididos em três partes: header, body e footer
+                 os três são acessados através das classes (card-header, etc). -->
+                <article class="card">
+                    <header class="card-header">
+                        Utopia Brasil
+                    </header>
+                    <img src="https://via.placeholder.com/100x100" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Camisa personalizada</h1>
+                        <h6 class="card-subtitle">Teste</h2>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nam possimus? Est veniam dolorem iusto repudiandae pariatur, facere molestiae eaque laudantium maiores aperiam quis accusamus quidem magni fugiat veritatis cumque.</p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </article>
+            </div>
+            <!-- existem variações dos cards, é possível usar uma imagem como background, substituindo
+             a classe card-body por card-img-overlay -->
+            <div class="col-4">
+                <div class="card text-bg-dark">
+                    <img src="https://i.pinimg.com/originals/7e/39/33/7e393387210021c5e80633b265ac4205.jpg" alt="">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Camisa personalizada</h1>
+                        <h6 class="card-subtitle">Teste</h2>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nam possimus? Est veniam dolorem iusto repudiandae pariatur, facere molestiae eaque laudantium maiores aperiam quis accusamus quidem magni fugiat veritatis cumque.</p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <!-- outra variação de card é o card text-bg-dark, que o torna com tema escuro -->
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        Utopia Brasil
+                    </div>
+                    <img src="https://rsv-ink-images-production.s3.sa-east-1.amazonaws.com/images/product_v2/main_image/9db9f906555fac74b41e46b19e4c628f.webp" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Camisa personalizada</h1>
+                        <h6 class="card-subtitle">Teste</h2>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nam possimus? Est veniam dolorem iusto repudiandae pariatur, facere molestiae eaque laudantium maiores aperiam quis accusamus quidem magni fugiat veritatis cumque.</p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
