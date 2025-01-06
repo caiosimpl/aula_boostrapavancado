@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: #fff;
+            
+        }
+        .nav-link{
+            text-align: center;
+        }
+        section{
+            height: 100vh;
+            background-color: rgb(211, 189, 157);
+        }
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+        section > h2 {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar geralmente é utilizado no header -->
+    <header id="cabecalho">
+        <!-- ele pode ser construido de maneira responsiva utilizando as classes do bootstrap
+         para manipular.
+         por exemplo, utilizando navbar-expand-lg, o botão aparecerá apenas nas telas pequenas -->
+        <div class="navbar navbar-expand-lg">
+           <div class="container">
+                <h1>Título do Site</h1>
+                <button data-bs-toggle="collapse" data-bs-target="#menu" type="button" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav id="menu" class="collapse navbar-collapse justify-content-end">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#promocoes">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#contatos">Contatos</a>
+                        </li>
+                    </ul>
+                </nav>
+           </div>
+        </div>
+    </header>
+    <!-- aqui eu criei as seções vazias apenas para trabalhar o menu, tornando-o ativa a seção demarcada
+     no navbar ao rolar a tela-->
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>    
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <!-- já aqui, trabalho o conteúdo de abas. 
+             possui quase o mesmo funcionamento do navbar, apenas trocando algumas tags/classes -->
+            <div class="container">
+                <nav class="nav nav-tabs">
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link">Eletrônicos</button>
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link active">Roupas</button>
+                    <button type="button" data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link">Garrafas</button>
+                </nav>
+                <div class="tab-content">
+                    <div id="aba1" class="tab-pane">Conteúdo eletronicos</div>
+                    <div id="aba2" class="tab-pane active">Conteudo roupas</div>
+                    <div id="aba3" class="tab-pane">Conteudo garrafas</div>
+                </div>
+            </div>
+        </section>         
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>  
+        <section id="contatos">
+            <h2>Contatos</h2>
+        </section>   
+    </div>
+    
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
